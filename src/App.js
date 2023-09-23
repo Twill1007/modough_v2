@@ -3,6 +3,7 @@ import About from "./pages/about/AboutPage";
 import Contact from "./pages/contact/ContactPage";
 import Dough from "./pages/dough/DoughPage";
 import Cart from "./pages/cart/CartPage";
+import Home from "./pages/home/HomePage";
 import {
   BrowserRouter as Router,
   Route,
@@ -19,6 +20,9 @@ function App() {
           <nav>
             <ul>
               <li>
+                <Link to="/">Home Page</Link>
+              </li>
+              <li>
                 <Link to="/about">About</Link>
               </li>
               <li>
@@ -33,6 +37,7 @@ function App() {
             </ul>
           </nav>
           <Routes>
+            <Route path="/" Component={Home} />
             <Route path="/about" Component={About} />
             <Route path="/contact" Component={Contact} />
             <Route path="/dough" Component={Dough} />
