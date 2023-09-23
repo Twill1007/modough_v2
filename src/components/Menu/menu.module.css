@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  background-color: red;
+}
+.button {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
