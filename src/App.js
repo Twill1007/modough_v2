@@ -1,16 +1,20 @@
 import React from "react";
-import About from "./pages/about/About";
-import Contact from "./pages/contact/Contact";
-import Dough from "./pages/dough/Dough";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
-import Menu from "./components/Menu/Menu";
-import Main from "./components/Main/Main";
+import About from "./pages/about/AboutPage";
+import Contact from "./pages/contact/ContactPage";
+import Dough from "./pages/dough/DoughPage";
+import Cart from "./pages/cart/CartPage";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Routes,
+  BrowserRouter,
+} from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Router>
+      <BrowserRouter>
         <div>
           <nav>
             <ul>
@@ -23,17 +27,19 @@ function App() {
               <li>
                 <Link to="/dough">Dough</Link>
               </li>
+              <li>
+                <Link to="/cart">Cart</Link>
+              </li>
             </ul>
           </nav>
-
-          <Route path="/about" Component={About} />
-          <Route path="/contact" Component={Contact} />
-          <Route path="/dough" Component={Dough} />
+          <Routes>
+            <Route path="/about" Component={About} />
+            <Route path="/contact" Component={Contact} />
+            <Route path="/dough" Component={Dough} />
+            <Route path="/cart" Component={Cart} />
+          </Routes>
         </div>
-      </Router>
-
-      <Main />
-      <Menu />
+      </BrowserRouter>
     </>
   );
 }
