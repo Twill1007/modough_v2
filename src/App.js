@@ -1,4 +1,6 @@
 import React from "react";
+
+import classes from "./app.module.css";
 import About from "./pages/about/AboutPage";
 import Contact from "./pages/contact/ContactPage";
 import Dough from "./pages/dough/DoughPage";
@@ -17,7 +19,7 @@ function App() {
     <>
       <BrowserRouter>
         <div>
-          <nav>
+          <nav className={classes.mainNav}>
             <ul>
               <li>
                 <Link to="/">Home Page</Link>
